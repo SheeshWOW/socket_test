@@ -5,6 +5,7 @@ sock.bind(('', 8888))
 sock.listen(5)
 #sock.setblocking(False)
 sock.settimeout(5)
+sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 while True:
     try:
